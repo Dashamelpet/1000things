@@ -50,14 +50,17 @@ button{
 }
 
 .container{
-    max-width: 1170px;
-    padding: 0 15px;
+    max-width: 1200px;
+    padding: 0 30px;
     margin: 0 auto;
 }
 
 body{
-    max-width: 1440px;
-    overflow-x: hidden;
+    max-width: 1200px;
+    font-size: 20px;
+    line-height: 32px;
+    @extend %font-crimson;
+    margin: 0 auto;
 }
 
 .wrapper{
@@ -68,4 +71,36 @@ body{
 
 main{
     flex-grow: 1;
+}
+.mb-70{
+    margin-bottom: 70px;
+}
+.title{
+    font-size: 28px;
+    line-height: 32px;
+    @extend %font-cource;
+}
+.btn-more{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: all .3s;
+    padding-right: 24px;
+    &::after{
+        position: absolute;
+        content: '';
+        background-image: url('../images/arrow-more.svg');
+        background-repeat: no-repeat;
+        width: 16px;
+        height: 16px;
+        right: 0;
+        top: 9px;
+        transition: all .3s;
+    }
+    &:hover{
+        color: #ED684B;
+        &::after{
+            background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.31 12.535a.406.406 0 010-.565l3.32-3.72H.4c-.22 0-.4-.18-.4-.4 0-.22.18-.4.4-.4h14.23l-3.315-3.72c-.145-.17-.16-.405-.005-.56.155-.155.425-.165.57-.005 0 0 3.96 4.35 4 4.4.04.05.12.14.12.285a.41.41 0 01-.12.285c-.04.04-4 4.4-4 4.4a.414.414 0 01-.57 0z' fill='%23ED684B'/%3E%3C/svg%3E");
+        }
+    } 
 }
